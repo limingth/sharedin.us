@@ -1,5 +1,9 @@
 SharedinUs::Application.routes.draw do
+  get "pub/dir"
+  get "nhome/create"
   get "welcome/index"
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -14,6 +18,9 @@ SharedinUs::Application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
+  resource :uas
+  #get "uas/login-submit"
+  get "uas/index"
 
   # Example resource route with options:
   #   resources :products do
