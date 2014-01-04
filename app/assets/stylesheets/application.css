@@ -11,3 +11,8 @@
  *= require_self
  *= require_tree .
  */
+
+/*common.css*/
+body {
+  font: Helvetica, arial, freesans, clean, sans-serif;
+}
