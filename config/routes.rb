@@ -11,6 +11,11 @@ end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
+  authenticated :user do
+    resources :users, :except => [:new, :edit, :show, :update]
+    root :to => 'welcome#index', :as => :user_root
+  end 
+
   # You can have the root of your site routed with "root"
 #  root 'welcome#index'
   root to: "home#index"

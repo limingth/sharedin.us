@@ -15,7 +15,34 @@
 
 <body class="en guest v2 new-ghome login-in-header chrome-v5 chrome-v5-responsive sticky-bg guest" id="pagekey-guest-home">
 
+<div id="header">
+  <div class="container">
+    <h1><img src="/assets/sharedin_logo.png" alt="LinkedIn" class="logo" height="32" width="132"></h1>
+    <p class="textad"></p>
+    <div class="login">
+      
+      <% if user_signed_in? %>
+
+      User <%= current_user.email %> has signed in
+
+      <%= button_to("Sign out", destroy_user_session_path, :method => :delete, :class => 'btn btn-xs btn-link nav-sign-out')  %>
+
+      <% else %>
+
+      No User has signed in
+
+      <%= render :partial => '/home/sign_in' %>
+
+      <% end %>
+          
+   
+    </div>
+  </div>
+</div>
+
+
 <%= yield %>
+
 
 </body>
 </html>
