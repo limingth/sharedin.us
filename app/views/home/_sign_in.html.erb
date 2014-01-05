@@ -1,0 +1,26 @@
+<form action="uas/index" method="GET" name="login" novalidate="novalidate" id="login" class="ajax-form" data-jsenabled="check">
+  <fieldset>
+    <legend>Sign In</legend>
+      <ul>
+          <li>
+            <label for="session_key-login" >Email address</label>
+
+            <div class="fieldgroup">
+              <span class="error" id="session_key-login-error"></span>
+              <input type="text" name="session_key" value="" id="session_key-login" autofocus tabindex="1" size="27" data-ime-mode-disabled>
+            </div>
+          </li>
+          <li>
+            <label for="session_password-login" >Password</label>
+            <div class="fieldgroup">
+              <span class="error" id="session_password-login-error"></span>
+              <input type="password" name="session_password" value="" id="session_password-login" tabindex="2" size="27">
+            </div>
+          </li>
+        <li class="button">
+          <input type="submit" name="signin" value="Sign In" id="signin" tabindex="3" class="btn-secondary">
+        </li>
+      </ul>
+    </script>
+  </fieldset>
+</form>
