@@ -8,7 +8,7 @@
           <li>
             <%= content_tag :small, '@'+current_user.lastname %>
             <br> (id: <%= current_user.id %> at <%= current_user.created_at %>)
-            <br> <a href="/follows/users">Show All Users</a>
+            <br> <a href="/welcome/index">Show All Users</a>
           </li>
           <li>
               <table class="table table-bordered stats">
@@ -17,7 +17,7 @@
                     <td>
                       <%= content_tag :h4, current_user.firstname %>
                       
-                      <a href="/tags/show">Tags</a>
+                      <a href="/tags">Tags</a>
                     </td>
                     <td>
                       <%= content_tag :h4, current_user.firstname %>
@@ -33,14 +33,14 @@
               </table>
           </li>
           <li>
-            <%= form_for (@twet || :twet), :url => 'tags_path',
+            <%= form_for (@tag || :tag), :url => tags_path,
                :method => :POST,
                :role => :form do |f| %>
               <div class="mar-top-15">
-          <%= content_tag :div do %>
-            <%= f.text_area :content, :placeholder => "Add a new Tag like ruby", :class => 'form-control', :height => "500" %>
-          <% end %>
-          <%= f.submit "Add Tag", :class => "btn btn-primary pull-right" %>
+                <%= content_tag :div do %>
+                  <%= f.text_area :name, :placeholder => "Add a new Tag like ruby", :class => 'form-control', :height => "500" %>
+                <% end %>
+            <%= f.submit "Add Tag", :class => "btn btn-primary pull-right" %>
               </div>
             <% end %>
           </li>

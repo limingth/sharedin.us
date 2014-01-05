@@ -1,4 +1,6 @@
 SharedinUs::Application.routes.draw do
+  resources :tags
+
   devise_for :users
   get "pub/dir"
   get "nhome/create"
