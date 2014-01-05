@@ -1,0 +1,45 @@
+
+   <div class="span3 siderbar">
+      <div id="content">
+        
+          <br>
+          <h2>all user info </h2><br>
+ 
+
+            <table width=100%>
+            <hr>
+              <tr>
+                <td width=10%><h4>ID</td>
+                <td width=30%><h4>FirstName</td>
+                <td width=20%><h4>Lastname</td>
+                <td width=40% align=right><h4>Email</td>
+              </tr>
+            <div class="panel panel-default col-md-8 text-left">
+            </div>
+              <tr>
+                <td width=10%><hr></td>
+                <td width=10%><hr></td>
+                <td width=10%><hr></td>
+                <td width=10%><hr></td>
+              </tr>
+
+              <% @users.each do |u| %>
+              <tr>
+                <td><%= u.id %></td>
+                <td>
+                  <%= content_tag :strong, u.firstname, :class => 'pull-left text-middle' %>
+                </td>
+                <td>
+                  <%= content_tag :strong, u.lastname, :class => 'pull-left text-middle' %>
+                </td>
+                <td>
+                  <%= content_tag :span, u.email, :class => 'text-muted pad-10 text-middle' %>
+                </td>
+                
+              </tr>
+              <% end %>
+            </table>
+
+
+      </div>
+    </div>

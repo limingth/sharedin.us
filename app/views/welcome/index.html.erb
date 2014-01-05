@@ -1,29 +1,18 @@
 
-<div class="clearfix top-space"></div>
-
-
-<div class="clearfix top-space"></div>
+<div id="main-wrapper">
+  <div id="main">
+    <div class="clearfix top-space"></div>
+  </div>
+</div>
 
 
 <div id="main-wrapper">
   <div id="main">
 
-    <header>
-      <div id="content">
-	<% @users.each do |u| %>
-		<h3><span class="text-gradient"></span><span class="headline"><script>utmx_section("Headline")</script>
-			<%= u.email %>
-			<%= u.firstname %>
-			<%= u.lastname %>
-
-			<%= current_user.email %>
-			<%= current_user.firstname %>
-			<%= current_user.lastname %>
-		</noscript></span></h3>
-        <% end %>
-      </div>
-    </header>
-
+    <%= render :partial => 'welcome/left_sidebar' %>
+  
+    <%= render :partial => 'welcome/user_list' %>
 
   </div>
 </div>
+

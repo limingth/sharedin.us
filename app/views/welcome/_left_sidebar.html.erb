@@ -1,0 +1,48 @@
+    <div class="span3 siderbar">
+      <div class="col-md-4">
+
+        <ul class="nav nav-pills nav-stacked well text-left">
+          <li>
+            <%= content_tag :strong, current_user.firstname %>
+          </li>
+          <li>
+            <%= content_tag :small, '@'+current_user.lastname %>
+            <br> (id: <%= current_user.id %> at <%= current_user.created_at %>)
+            <br> <a href="/follows/users">Show All Users</a>
+          </li>
+          <li>
+              <table class="table table-bordered stats">
+                <tbody>
+                  <tr>
+                    <td>
+                      <%= content_tag :h4, current_user.email %>
+                      
+                      <a href="/tags/show">Tags</a>
+                    </td>
+                    <td>
+                      <%= content_tag :h4, current_user.email %>
+                     
+                      <a href="/connections/show">Connections</a>
+                    </td>
+                    <td>
+                      <%= content_tag :h4, current_user.email %>
+                      
+                      <a href="/messages/shows">Messages</a>
+                    </td>
+                </tbody>
+              </table>
+          </li>
+          <li>
+            <%= form_for (@twet || :twet), :url => 'tags_path',
+               :method => :POST,
+               :role => :form do |f| %>
+              <div class="mar-top-15">
+          <%= content_tag :div do %>
+            <%= f.text_area :content, :placeholder => "Add a new Tag like ruby", :class => 'form-control', :height => "500" %>
+          <% end %>
+          <%= f.submit "Add Tag", :class => "btn btn-primary pull-right" %>
+              </div>
+            <% end %>
+          </li>
+      </div>
+    </div>
