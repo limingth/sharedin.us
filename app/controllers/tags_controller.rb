@@ -1,5 +1,5 @@
 class TagsController < ApplicationController
-  
+
   def get_connections
     conns = []
     
@@ -47,6 +47,7 @@ class TagsController < ApplicationController
   def show 
     puts "show" 
     @tagname = params[:tagname]
+    @tagname.capitalize!
     @rets = Tag.where(:name => @tagname)
     render '/tags/search'
   end
