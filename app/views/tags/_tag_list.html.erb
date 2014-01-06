@@ -33,7 +33,7 @@
                   <%= content_tag :strong, t.name, :class => 'pull-left text-middle' %>
                 </td>
                 <td>
-                  <%= content_tag :span, current_user.firstname, :class => 'text-muted pad-10 text-middle' %>
+                  <%= content_tag :span, get_user_name(t.user_id), :class => 'text-muted pad-10 text-middle' %>
                 </td>
                 
               </tr>

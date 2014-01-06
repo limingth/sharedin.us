@@ -1,11 +1,8 @@
 class TagsController < ApplicationController
 
   def index
-    @tags = Tag.all
-  end
-
-  def create
-    @tags = Tag.all
+    #@tags = Tag.all
+    @tags = Tag.where(:user_id => current_user.id)
   end
 
   def create

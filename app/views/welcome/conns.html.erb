@@ -1,0 +1,37 @@
+
+<div id="main-wrapper">
+  <div id="main">
+    <div class="clearfix top-space"></div>
+  </div>
+</div>
+
+
+<div id="main-wrapper">
+  <div id="main">
+
+    <%= render :partial => 'welcome/left_sidebar' %>
+  
+   <div class="span3 siderbar">
+      <div id="content">
+        
+          <br>
+          <h2>all conns' info </h2><br>
+ 
+          <% @conns.each do |t| %>
+             <%= get_user_name(t.id1) %>
+            <-----
+              <%= t.tag %>
+            ----->
+             <%= get_user_name(t.id2) %>
+            
+             <br>
+          <% end %>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+

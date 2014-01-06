@@ -5,6 +5,7 @@ SharedinUs::Application.routes.draw do
   get "pub/dir"
   get "nhome/create"
   get "welcome/index"
+  get "welcome/conns"
 
 devise_scope :user do
   get "sign_in", :to => "devise/sessions#new"
