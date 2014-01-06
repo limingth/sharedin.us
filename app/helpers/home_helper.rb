@@ -6,4 +6,9 @@ module HomeHelper
     current_user || User.new
   end
 
+  def get_user_name(id)
+    user = User.where(:id => id).first 
+    return user.firstname + "." + user.lastname
+  end 
+
 end

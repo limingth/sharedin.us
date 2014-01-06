@@ -20,6 +20,14 @@ class TagsController < ApplicationController
     end 
   end 
 
+  def show 
+    puts "show" 
+    puts params[:tagname]
+    @tagname = params[:tagname]
+    @rets = Tag.where(:name => @tagname)
+    render '/tags/search'
+  end
+
 private
   def tag_params
     params.require(:tag).permit(:name)
