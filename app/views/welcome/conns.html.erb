@@ -18,20 +18,73 @@
           <h2>all conns' info </h2><br>
  
           <% @conns.each do |t| %>
-             <%= get_user_name(t.id1) %>
-            <-----
+          
+         
+         <svg height="218" version="1.1" width="278" xmlns="http://www.w3.org/2000/svg" style="overflow: hidden; position: relative; left: -0.5px;">
+
+          <desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.1.0</desc>
+
+          <defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+
+          <pattern id="DB60C5BE-61E1-495E-AA2A-BD37103A9570" x="0" y="0" patternUnits="userSpaceOnUse" height="60" width="60" patternTransform="matrix(1,0,0,1,0,0) translate(0.9552432309057406,109)" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+
+          <image x="0" y="0" xlink:href="http://m.c.lnkd.licdn.com/mpr/mpr/shrink_60_60/p/1/000/18c/0b2/1eccb8f.jpg" width="60" height="60" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></image>
+
+          </pattern>
+
+          <pattern id="0250A6AB-7777-4227-9E32-FAE3768598CF" x="0" y="0" patternUnits="userSpaceOnUse" height="60" width="60" patternTransform="matrix(1,0,0,1,0,0) translate(216.95524323090575,109)" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+
+          <image x="0" y="0" xlink:href="http://m.c.lnkd.licdn.com/mpr/mpr/shrink_60_60/p/7/005/00e/33c/175d4ad.jpg" width="60" height="60" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></image></pattern></defs>
+
+          <path fill="none" stroke="#666666" d="M30,139A54.5,5.5,0,1,1,248,139" stroke-dasharray="2,1.5" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path>
+
+          <circle cx="31" cy="139" r="30" fill="url(#DB60C5BE-61E1-495E-AA2A-BD37103A9570)" stroke="#666666" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+
+          <circle cx="247" cy="139" r="30" fill="url(#0250A6AB-7777-4227-9E32-FAE3768598CF)" stroke="#666666" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+
+
+          <text x="139" y="40.66666666666667" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#ffffff" font-family="Helvetica, Arial, sans-serif" font-size="20px" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 20px; line-height: normal; font-family: Helvetica, Arial, sans-serif;"><tspan dy="6.893229166666671" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">1</tspan></text><a xlink:href="javascript:void(0)" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+
+          <circle cx="139" cy="38.66666666666667" r="28.666666666666668" fill="#000000" stroke="none" fill-opacity="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 0;"></circle></a><rect x="120" y="73.328125" width="38" height="14.015625" r="0" rx="0" ry="0" fill="#ffffff" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect>
+
+          <circle cx="139" cy="128" r="28.666666666666668" fill="#083950" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+
+          <circle cx="139" cy="128" r="28.666666666666668" fill="#000000" stroke="none" fill-opacity="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 0;"></circle>
+
+          <text x="139" y="130" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#ffffff" font-family="Helvetica, Arial, sans-serif" font-size="20px" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 20px; line-height: normal; font-family: Helvetica, Arial, sans-serif;"><tspan dy="6.8984375" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">1</tspan></text><a xlink:href="javascript:void(0)" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+
+          <circle cx="139" cy="128" r="28.666666666666668" fill="#000000" stroke="none" fill-opacity="0" id="callout-trigger-23" class="" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 0;"></circle></a>
+
+          <rect x="102" y="162.65625" width="74" height="14.015625" r="0" rx="0" ry="0" fill="#ffffff" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect>
+
+          <text x="139" y="169.66666666666666" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#333333" font-family="Helvetica, Arial, sans-serif" font-size="12px" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Helvetica, Arial, sans-serif;"><tspan dy="4.236979166666657" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"> </tspan>
+            <%= t.tag %>
+          </text>
+
+          <text x="25" y="185.66666666666666" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#333333" font-family="Helvetica, Arial, sans-serif" font-size="12px" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Helvetica, Arial, sans-serif;"><tspan dy="4.236979166666657" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"> </tspan>
+           <%= get_user_name(t.id1) %>
+          </text>
+
+          <text x="235" y="185.66666666666666" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#333333" font-family="Helvetica, Arial, sans-serif" font-size="12px" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Helvetica, Arial, sans-serif;"><tspan dy="4.236979166666657" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"> </tspan>
+           <%= get_user_name(t.id2) %>
+          </text>
+
+        </svg>
+
+           <%= get_user_name(t.id1) %>
+            <---------------------------
               <%= t.tag %>
-            ----->
+            --------------------------->
              <%= get_user_name(t.id2) %>
-            
+
              <br>
           <% end %>
-
       </div>
     </div>
 
   </div>
 </div>
+
 
 
 

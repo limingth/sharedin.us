@@ -34,13 +34,19 @@
 
  <li data-recipient-id="10575581" data-endorsed-item-name="Software Engineering" data-endorsed-item-type="skill" data-recipient-type="member" class="endorse-item has-endorsements endorsed-by-viewer" data-endorsement-id="37626052481" data-endorser-ids=""><span class="skill-pill"><a class="endorse-count" href="javascript:void(0)" role="button" title="See endorsers"><span class="num-endorsements" data-count="4"> <%= get_tag_count(t.name) %> </span></a>
 
+
   <span class="endorse-item-name "><a href="#" title="Search for Software Engineering" class="endorse-item-name-text"> <%= content_tag :strong, t.name, :class => 'pull-left text-middle' %> </a></span></span>
 
 
 
                 </td>
                 <td>
-                  <%= content_tag :span, get_tag_users(t.name), :class => 'text-muted pad-10 text-middle' %>
+                  <% get_tag_users(t.name).each do |u| %>
+                  <%= u.firstname + "." + u.lastname %>
+                  
+                  <img src="http://m.c.lnkd.licdn.com/mpr/mpr/shrink_60_60/p/1/000/18c/0b2/1eccb8f.jpg" width="20" height="20" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></img> , 
+
+                  <% end %>
                 </td>
                 
               </tr>

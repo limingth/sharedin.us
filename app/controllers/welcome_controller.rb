@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
-  
+
   def get_connections
     conns = []
     
@@ -30,6 +30,7 @@ class WelcomeController < ApplicationController
     @users = User.all
     @tags = Tag.where(:user_id => current_user.id)
     @conns = get_connections
+
   end
 
   def tags
