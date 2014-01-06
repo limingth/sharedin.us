@@ -2,9 +2,9 @@ SharedinUs::Application.routes.draw do
   resources :tags
 
   devise_for :users
-  get "pub/dir"
-  get "nhome/create"
+
   get "welcome/index"
+  get "welcome/tags"
   get "welcome/conns"
 
 devise_scope :user do

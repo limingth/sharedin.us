@@ -8,7 +8,11 @@ module HomeHelper
 
   def get_user_name(id)
     user = User.where(:id => id).first 
-    return user.firstname + "." + user.lastname
+    if user != nil
+    	return user.firstname.to_s + "." + user.lastname.to_s
+    else
+    	return ""
+    end
   end 
 
 end

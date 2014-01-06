@@ -15,18 +15,17 @@
                 <tbody>
                   <tr>
                     <td>
-                      <%= content_tag :h4, current_user.firstname %>
-                      
-                      <a href="/tags">Tags</a>
+                      <%= content_tag :h4, current_user.tags.count %>
+                      <a href="/welcome/tags">Tags</a>
                     </td>
                     <td>
-                      <%= content_tag :h4, current_user.firstname %>
-                     
+                      <% if @conns %> <%= @conns.size %>  <% else %> 0  <% end %>
+                     <br>
                       <a href="/welcome/conns">Connections</a>
                     </td>
                     <td>
-                      <%= content_tag :h4, current_user.firstname %>
-                      
+                       0
+                      <br>
                       <a href="/messages/shows">Messages</a>
                     </td>
                 </tbody>

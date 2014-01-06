@@ -6,8 +6,8 @@ class User < ActiveRecord::Base
 
   has_many :tags
 
+
   def all_tags
     Tag.by_user_ids(id)
   end
-
 end

@@ -1,18 +1,18 @@
 
-   <div class="span3 siderbar">
+<link rel="stylesheet" type="text/css" href="http://s.c.lnkd.licdn.com/scds/concat/common/css?h=bav4ri0cj19drgjd5p7mtdiqm-7ulzhu8hni00m6a4np84k277j-2rv2y12hyff71le8v636f09ke-4jgc0mxoulswzpfs5r6q7n953-58q62acx0sh8cbeobxudcq11x-6emh6rzyc76qkp5nqp6sle5m3-1sfg945l99sq0r9tov50agsfw-3jwa0iljvjbntb50hywszyrd5-8dg2mu1xu7slkwt8fj27le31k-cs7d7wj6bvxzgwwn5d83r9gr6-5i7vwelz328fdjbyzobk174gc-2tnmg8c8kfhzqdotyd5cqhg09-72o5100kyp71pkwaiejx6r5mv-dh1yrmhrxy7sav5o6ts2cybkd&amp;fc=2">
+
+   <div class="span6 siderbar">
       <div id="content">
-        
-          <br>
+
           <h2>all tags' info </h2><br>
- 
 
             <table width=100%>
             <hr>
               <tr>
-                <td width=10%><h4>tag_id</td>
-                <td width=30%><h4>user_id</td>
-                <td width=20%><h4>tag_name</td>
-                <td width=40% align=right><h4>user_name</td>
+                <td width=20%><h4>tag_id</td>
+                <td width=20%><h4>user_id</td>
+                <td width=30%><h4>tag_name</td>
+                <td width=30% align=right><h4>user_name</td>
               </tr>
             <div class="panel panel-default col-md-8 text-left">
             </div>
@@ -30,10 +30,17 @@
                   <%= content_tag :strong, t.user_id, :class => 'pull-left text-middle' %>
                 </td>
                 <td>
-                  <%= content_tag :strong, t.name, :class => 'pull-left text-middle' %>
+                 
+
+ <li data-recipient-id="10575581" data-endorsed-item-name="Software Engineering" data-endorsed-item-type="skill" data-recipient-type="member" class="endorse-item has-endorsements endorsed-by-viewer" data-endorsement-id="37626052481" data-endorser-ids=""><span class="skill-pill"><a class="endorse-count" href="javascript:void(0)" role="button" title="See endorsers"><span class="num-endorsements" data-count="4"> <%= get_tag_count(t.name) %> </span></a>
+
+  <span class="endorse-item-name "><a href="#" title="Search for Software Engineering" class="endorse-item-name-text"> <%= content_tag :strong, t.name, :class => 'pull-left text-middle' %> </a></span></span>
+
+
+
                 </td>
                 <td>
-                  <%= content_tag :span, get_user_name(t.user_id), :class => 'text-muted pad-10 text-middle' %>
+                  <%= content_tag :span, get_tag_users(t.name), :class => 'text-muted pad-10 text-middle' %>
                 </td>
                 
               </tr>
