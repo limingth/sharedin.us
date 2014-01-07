@@ -7,55 +7,24 @@
 
 <div id="main-wrapper">
   <div id="main">
-
-       <div class="span3 siderbar">
-      <div id="content">
-        
-          <br>
-
-          <a href="/"> Reture to homepage </a>
-
-          <h2>Search "<%= @tagname %>" </h2><br>
- 
-
-            <table width=100%>
-            <hr>
-              <tr>
-                <td width=10%><h4>tag_id</td>
-                <td width=30%><h4>user_id</td>
-                <td width=20%><h4>user_name</td>
-                <td width=40% align=right><h4>tag_name</td>
-              </tr>
-            <div class="panel panel-default col-md-8 text-left">
+    <a href="/"> Reture to homepage </a>
+    <h2>Search "<%= @tagname %>" </h2><br>
+    <ul class="search-result-list">
+      <% @rets.each do |r| %>
+        <li class="search-result clearfix">
+          <%= image_tag 'default_avatar.png', class: "user-avatar" %>
+          <%= link_to get_user_name(r.user_id), class: "user-name" %>
+          <div class="tag-name">
+            <%= r.name %>
+          </div>
+          <div class="search-result-action">
+            <div class="primary-action-button">
+              Connect
             </div>
-              <tr>
-                <td width=10%><hr></td>
-                <td width=10%><hr></td>
-                <td width=10%><hr></td>
-                <td width=10%><hr></td>
-              </tr>
-
-              <% @rets.each do |r| %>
-              <tr>
-                <td><%= r.id %></td>
-                <td>
-                  <%= content_tag :strong, r.user_id, :class => 'pull-left text-middle' %>
-                </td>
-                <td>
-                  <%= content_tag :strong, get_user_name(r.user_id), :class => 'pull-left text-middle' %>
-                </td>
-                <td>
-                  <%= content_tag :span, r.name , :class => 'text-muted pad-10 text-middle' %>
-                </td>
-                
-              </tr>
-              <% end %>
-            </table>
-
-
-      </div>
-    </div>
-
+          </div>
+        </li>
+      <% end %>
+    </ul>
   </div>
 </div>
 

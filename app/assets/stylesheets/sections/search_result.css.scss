@@ -1,0 +1,25 @@
+.search-result {
+  width: 600px;
+  margin: 0 auto;
+  position: relative;
+  padding: 10px 0;
+  &:hover {
+    background: #f4f4f4;
+  }
+  .search-result-action {
+    position: absolute;
+    top: 30px;
+    right: 10px;
+  }
+  .user-avatar {
+    float: left;
+    display: block;
+    margin-right: 10px;
+  }
+  .user-name {
+    display: block;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+  }
+}
