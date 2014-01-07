@@ -2,9 +2,9 @@ class TagsController < ApplicationController
 
   def get_connections
     conns = []
-    
+
     current_user.tags.each do |t|
-      puts current_user.id 
+      puts current_user.id
       puts t.name
       tags = Tag.where(:name => t.name)
       tags.each do |u|
@@ -13,7 +13,7 @@ class TagsController < ApplicationController
          conns += [conn]
         end
       end
-    end  
+    end
     return conns
   end
 
@@ -26,7 +26,7 @@ class TagsController < ApplicationController
     tagname = params.require(:tag)[:name].to_s
     tagname.capitalize!
     ret = Tag.where(:user_id => current_user.id).where(:name => tagname)
-    
+
     if ret.count > 0
       flash[:error] = "Your tag already exists"
       redirect_to :action => :index and return
@@ -41,11 +41,11 @@ class TagsController < ApplicationController
       get_tags
       flash[:error] = "Your tag could not be saved"
 #      render :action => :index and return
-    end 
-  end 
+    end
+  end
 
-  def show 
-    puts "show" 
+  def show
+    puts "show"
     @tagname = params[:tagname]
     @tagname.capitalize!
     @rets = Tag.where(:name => @tagname)
