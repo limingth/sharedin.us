@@ -12,10 +12,10 @@
     <ul class="search-result-list">
       <% @rets.each do |r| %>
         <li class="search-result clearfix">
-          <%= image_tag 'default_avatar.png', class: "user-avatar" %>
-          <%= link_to get_user_name(r.user_id), class: "user-name" %>
+          <%= gravatar_for r.user_id %>
+          <%= r.name %>
           <div class="tag-name">
-            <%= r.name %>
+            <%= link_to get_user_name(r.user_id), class: "user-name" %>
           </div>
           <div class="search-result-action">
             <div class="primary-action-button">
